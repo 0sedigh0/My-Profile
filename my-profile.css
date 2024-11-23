@@ -8,11 +8,12 @@ img {
 }
 
 body {
-  margin:  50px auto;
+  /*margin:  750px 100px 400px 250px ;*/
+  margin:  600px auto ;
 
   
-  max-width: 460px;
-  max-height: 700px;
+  max-width: 500px;
+  max-height: 800px;
  
   
   border: solid 3px;
@@ -20,7 +21,10 @@ body {
   
 
   background:url("image/home.jpg");
-  background-size: cover;
+  background-size:cover;
+  
+  background-repeat: no-repeat;
+  background-position: center;
   /*background: linear-gradient(135deg, #1281f8, #042ba2);*/
   font-family: "Trebuchet MS";
   text-decoration: none;
