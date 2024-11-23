@@ -147,7 +147,7 @@ a i {
 /* انیمیشن چشمک‌زن برای نشانگر تایپ */
 @keyframes blink {
   from, to { border-color: transparent; }
-  50% { border-color: rgba(255, 255, 255, 0); }
+  50% { }
 }
 
 /*هنوز این رو یاد نگرفتم*/
