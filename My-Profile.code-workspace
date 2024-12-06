@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../css/amozesh"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "My-Profile",
+		"liveServer.settings.port": 5501
+	}
+}

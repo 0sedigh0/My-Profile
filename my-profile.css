@@ -1,58 +1,81 @@
 
-.welcome {
 
-  
-  display: inline block;
-  background-color: rgba(0, 0, 0, 0.1);
+.welcomBox {
+
+  width: 650px;
+  margin: 100px auto;
+  background-color: rgba(50, 50, 50, 0.212);
   backdrop-filter: blur(30px);
   border-radius: 50px;
-  border: solid 0px rgba(255, 255, 255, 0.207);
-  border-color: aliceblue;
-  padding: 50px;
-
+  border: solid 1px;
+  border-color: rgba(255, 255, 255, 0.399);
+  padding: 0px 0px 0px 80px;
   font-family:monospace;
-  font-size: 100px;
-  position:absolute  ;
-  
-  top: 400px;
-  
-  
-
-/*هنوز این رو یاد نگرفتم*/
-
-  white-space: nowrap; /* جلوگیری از شکستن متن */
-  overflow: hidden; /* مخفی کردن متن اضافی */
-  border-right: 4px solid rgb(255, 255, 255); /* نشانگر تایپ */
-  width: 400px; /* عرض متن تایپ‌شده */
-  animation: typing 1s steps(7, end), blink 0.5s step-end infinite;
-
-/*هنوز این رو یاد نگرفتم*/
-
+  text-align: center;
 
 }
 
-img {
-  animation: bounce 2s infinite;
+.welcom {
 
+  text-align: center;
+  font-size: 43px;
+  font-weight:bold;
+  padding: 0 0 0 20px;
+ 
+  /*هنوز این رو یاد نگرفتم*/
+  font-family: monospace;
+  white-space: nowrap; /* جلوگیری از شکستن خط */
+  overflow: hidden; /* مخفی کردن متن اضافه */
+  max-width: 0px;/* شروع انیمیشن با عرض صفر */
+  border-right: 5px solid white; /* نشانگر تایپ */  
+  animation: typing 5s steps(23, end) forwards, blink 1s linear infinite ;
+  transition: 1s;
+/*هنوز این رو یاد نگرفتم*/
+  
+
+}
+
+/*هنوز این رو یاد نگرفتم*/
+
+@keyframes typing {
+  from {
+    max-width: 0; /* شروع انیمیشن از عرض صفر */
+  }
+  to {
+    max-width: calc(86% - 15px); /* تمام متن نمایش داده شود */
+  }
+}
+
+/* انیمیشن چشمک‌زن برای نشانگر تایپ */
+@keyframes blink {
+  from, to {border-color: transparent; /* نشانگر مخفی شود */
+  }
+  50% {
+    border-color: white; /* نشانگر سفید شود */
+  }
+
+}
+/*هنوز این رو یاد نگرفتم*/
+
+
+.imgP {
+  
   margin-top: 80px;
   border-radius: 75px;
   height: 150px;
   width: 150px;
+  
+}
+
+.imgP:hover{
+
+  animation: bounce 2s infinite;
+  
 }
 
 body {
-  margin:  800px auto;
 
-  
-  max-width: 500px;
-  max-height: 800px;
- 
-  
-  border: solid 3px;
-  border-radius: 35px;
-  
-
-  background:url("image/home.jpg");
+  background:url("image/tree.jpg");
   background-size: cover;
   /*background: linear-gradient(135deg, #1281f8, #042ba2);*/
   font-family: "Trebuchet MS";
@@ -62,7 +85,18 @@ body {
   
 }
 
+.myProfile {
+
+  margin: 100px auto;
+  max-width: 550px;
+  max-height: 800px;
+  border: solid 5px white;
+  border-radius: 35px;
+
+}
+
 h1 {
+
   margin-top: 30px;
   font-size: 35px;
 
@@ -74,11 +108,9 @@ h2 {
   font-size: 18px;
 }
 
-.fas.fa-code {
-  margin: 5px;
-}
 
-p {
+
+.firstGlass {
 
   color: rgb(255, 255, 255);
   font-size: 18px;
@@ -92,6 +124,14 @@ p {
   margin: 80px 100px 0px 100px;
   padding: 28px 10px 30px 10px;
   text-align: center;
+}
+
+.fab.fa-instagram {
+
+  margin: 0 3px 3px 0 ;
+  font-size: 20px;
+  text-decoration: none;
+
 }
 
 a {
@@ -117,11 +157,6 @@ a:hover {
   transform: scale(1.05);
 }
 
-a i {
-  font-size: 30px;
-  vertical-align: middle;
-}
-
 @keyframes bounce {
   0%,
   20%,
@@ -139,20 +174,187 @@ a i {
   }
 }
 
-/*هنوز این رو یاد نگرفتم*/
+.glassBox {
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 400px; }
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  gap: 250px;
+  
+  
+  
+  text-align: left;
+
+  color: rgb(42, 153, 233);
+
+  .hWitht {
+
+    color: rgb(255, 255, 255);
+    margin: 0 0 20px 0 ;
+
+  }
+
+  .style {
+
+    width: 300px;
+    padding: 20px 50px 30px 50px;
+    margin: 0 0 30px 100px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.138);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
+    border: solid 1px rgba(152, 152, 152, 0.274);
+
+    transition: 0.5s ease;
+
+  }
+
+  .style:hover {
+
+    transform: scale(1.1);
+    
+    
+
+  }
+
+  .h2Margin {
+
+    margin: 0 0 30px 0;
+
+    color: rgba(255, 255, 255, 0.186);
+    
+
+  }
+
 }
 
-/* انیمیشن چشمک‌زن برای نشانگر تایپ */
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: rgba(255, 255, 255, 0); }
+.px {
+
+  color: rgb(255, 166, 0);
+
 }
 
-/*هنوز این رو یاد نگرفتم*/
+.card {
+
+  width: 400px;
+  height: 240px;
+
+  margin: 0 0 30px 100px;
+  font-size: 18px;
+  background-color: rgba(21, 89, 125, 0.462);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
+  border: solid 1px rgba(104, 137, 247, 0.26);
+
+  transition: 0.5s ease;
+}
+.card:hover {
+
+  transform: scale(1.07);
+
+}
+
+
+.imgh {
+
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(2,330px);
+  
+
+}
+
+.h5Witht {
+
+  display: inline-block;
+  width: 95px ;
+  margin: 40PX 0 0 30px ;
+  color:white;
+  
+}
+
+.blu {
+
+  width: 90px;
+  height: 90px;
+  margin: 0px 0px 0 0px;
+  fill: #ffffffe4;
+
+}
+  
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+.numCard {
+
+  font-size: 25px;
+  color: #fff;
+  margin: 100px 0 0 32px;
+  font-family: 'Gilroy-Regular', sans-serif;
+
+}
+
+.endLine {
+
+  display: grid;
+  grid-template-columns: repeat(2,200px);
+  
+}
+
+.myName {
+
+  color: #fff;
+  margin: 25px 0 0 30px;
+  width: 138px;
+
+}
+
+.myage {
+    
+  color: #fff;
+
+}
+
+
+
+.show {
+
+  display:block;
+  margin:  1px auto;
+  background-color: rgba(87, 87, 87, 0.155);
+  font-size: 30px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 15px;
+  border: solid 1px rgba(255, 255, 255, 0.497);
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.796);
+  backdrop-filter: blur(5px);
+  text-align: center;
+
+  transition: 0.2s;
+
+}
+.show:hover {
+
+  background-color: #a4ec4c2b;
+  
+  transform: scale(1.02);
+  
+}
+
+#test {
+
+  display: inline-block;
+  font-size: 30px;
+  border-radius: 20px;
+  background-color: rgba(34, 34, 34, 0.359);
+  backdrop-filter: blur(10px);
+  padding: 20px 20px 20px 20px;
+}
+
+  
+
 
 
 
