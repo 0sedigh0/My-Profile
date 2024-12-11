@@ -213,7 +213,7 @@
 
 body {
 
-  background:url("/items/img/imgBackgraond/tree.jpg");
+  background:url("items/img/imgBackgraond/tree.jpg");
   /*background: linear-gradient(135deg, #1281f8, #042ba2);*/
   font-family: "Trebuchet MS";
   text-decoration: none;
