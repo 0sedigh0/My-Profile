@@ -1,5 +1,145 @@
 
+/*ساخت نوار بالای سایت */
+.navar {
 
+  display: grid;
+  grid-template-columns: repeat(5,100px);
+  direction: rtl;
+  height: 65px ;
+  /* 
+   direction: rtl;  ترتیب محتوا از راست به چپ 
+   text-align: left;  متن به چپ تراز می‌شود 
+  */
+  
+  position:fixed;
+  left: 14px;
+  width: 1500px;
+  top: 5px;
+  z-index: 1000;
+  
+  background-color: rgba(210, 254, 228, 0.433);
+  backdrop-filter: blur(10px);
+  /*text-align: right;*/
+  direction: rtl;
+  border-radius: 8px;
+
+} 
+
+.menu {
+
+  display: inline-block;
+  margin-bottom: 2px;
+  margin-right: 0px;
+  width: 35px;
+  fill: #caffe6;
+
+  transition: 0.2s linear;
+
+}
+
+.menu:hover {
+
+  fill: #6fff1c;
+
+}
+
+.menu:active {
+
+  transform: scale(0.9);
+
+}
+
+.buttonMenu{
+
+  display: inline-block;
+  padding: 0 0 0 10px;
+  background-color: #ffffff00;
+  border: solid rgba(255, 255, 255, 0);
+
+}
+
+#menuOn {
+
+  
+  position: fixed; 
+  top: 90px; 
+  right: 30px; 
+  background-color: rgba(210, 254, 228, 0.27);
+  backdrop-filter: blur(15px);
+  padding: 15px 10px 20px 10px; 
+  border-radius: 10px;
+  border:solid 2px rgba(255, 255, 255, 0.395);
+  text-align: right;
+
+  transition:all 0.2s ease;
+
+  z-index: 1001;
+
+}
+
+.creatSentence {
+
+  margin-top: 15px; 
+  color: #ffffff;
+  border-top: solid 4px #6fff1c;
+  width: 0px;
+/*border-top-style:*/
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 3px;
+  transition: 0.25s;
+  
+}
+
+.creatSentence:hover {
+
+  width: 76px;
+
+}
+
+.creatHome {
+
+  margin-top: 15px; 
+  color: #ffffff;
+  border-top: solid 4px #6fff1c;
+  width: 0px;
+/*border-top-style:*/
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 3px;
+  transition: 0.25s;
+
+}
+
+.creatHome:hover {
+
+  width: 48px;
+
+}
+
+.about {
+
+  display: block;
+  margin-bottom: 10px;
+  font-size: 23px;
+  text-decoration: none;
+  color: #ecfff6;
+  transition: 0.5s;
+  padding: 5px 10px 5px 90px;
+  border-radius: 3px;
+
+}
+
+.about:hover {
+
+  background-color: rgba(87, 121, 101, 0.229);
+  color: #fdff97;
+
+}
+
+/*ساخت خوش آمد */
 .welcomBox {
 
   width: 650px;
@@ -28,21 +168,20 @@
   overflow: hidden; /* مخفی کردن متن اضافه */
   max-width: 0px;/* شروع انیمیشن با عرض صفر */
   border-right: 5px solid white; /* نشانگر تایپ */  
-  animation: typing 5s steps(23, end) forwards, blink 1s linear infinite ;
+  animation: typing 4s steps(23, end) forwards, blink 1s linear infinite ;
   transition: 1s;
 /*هنوز این رو یاد نگرفتم*/
   
-
 }
 
 /*هنوز این رو یاد نگرفتم*/
 
 @keyframes typing {
   from {
-    max-width: 0; /* شروع انیمیشن از عرض صفر */
+    max-width: 0px; /* شروع انیمیشن از عرض صفر */
   }
   to {
-    max-width: calc(86% - 15px); /* تمام متن نمایش داده شود */
+    max-width: calc(86% - 0px); /* تمام متن نمایش داده شود */
   }
 }
 
@@ -56,7 +195,6 @@
 
 }
 /*هنوز این رو یاد نگرفتم*/
-
 
 .imgP {
   
@@ -75,11 +213,11 @@
 
 body {
 
-  background:url("image/tree.jpg");
-  background-size: cover;
+  background:url("/items/img/imgBackgraond/tree.jpg");
   /*background: linear-gradient(135deg, #1281f8, #042ba2);*/
   font-family: "Trebuchet MS";
   text-decoration: none;
+  background-size: cover;
   text-align: center;
   color: white;
   
@@ -95,20 +233,18 @@ body {
 
 }
 
-h1 {
+.name {
 
   margin-top: 30px;
   font-size: 35px;
 
 }
 
-h2 {
+.channel {
 
   margin-top: 30px;
   font-size: 18px;
 }
-
-
 
 .firstGlass {
 
@@ -120,7 +256,6 @@ h2 {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
   border: solid 1px rgba(225, 225, 225, 0.374);
-
   margin: 80px 100px 0px 100px;
   padding: 28px 10px 30px 10px;
   text-align: center;
@@ -134,7 +269,7 @@ h2 {
 
 }
 
-a {
+.instagram {
   margin: 100px 30px 40px 40px;
   display: block;
   font-size: 20px;
@@ -143,15 +278,14 @@ a {
   background-color: white;
   padding: 15px 40px;
   border-radius: 15px;
-
   text-decoration: none;
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   transition: 0.5s ease;
+
 }
 
-a:hover {
+.instagram:hover {
   color: white;
   background-color: rgb(52, 23, 237);
   transform: scale(1.05);
@@ -179,54 +313,46 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(3,200px);
   gap: 250px;
-  
-  
-  
   text-align: left;
-
   color: rgb(42, 153, 233);
+}
 
-  .hWitht {
+.hWitht {
 
-    color: rgb(255, 255, 255);
-    margin: 0 0 20px 0 ;
+  color: rgb(255, 255, 255);
+  margin: 0 0 20px 0 ;
 
-  }
+}
 
-  .style {
+.style {
 
-    width: 300px;
-    padding: 20px 50px 30px 50px;
-    margin: 0 0 30px 100px;
-    font-size: 18px;
-    background: rgba(0, 0, 0, 0.138);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
-    border: solid 1px rgba(152, 152, 152, 0.274);
-
-    transition: 0.5s ease;
-
-  }
-
-  .style:hover {
-
-    transform: scale(1.1);
+  width: 300px;
+  padding: 20px 50px 30px 50px;
+  margin: 0 0 30px 100px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.138);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     
+  border: solid 1px rgba(152, 152, 152, 0.274);
+
+  transition: 0.3s ease;
+
+}
+
+.style:hover {
+
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.438);
+   transform: scale(1.02);
     
+}
 
-  }
+.h2Margin {
 
-  .h2Margin {
-
-    margin: 0 0 30px 0;
-
-    color: rgba(255, 255, 255, 0.186);
+  margin: 0 0 30px 0;
+  color: rgba(255, 255, 255, 0.186);
     
-
-  }
-
 }
 
 .px {
@@ -246,17 +372,18 @@ a:hover {
   border-radius: 20px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
-  border: solid 1px rgba(104, 137, 247, 0.26);
+  
+  border: solid 1px rgba(104, 137, 247, 0);
+  
+  transition: 0.3s ease;
 
-  transition: 0.5s ease;
 }
 .card:hover {
 
-  transform: scale(1.07);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.349);
+  transform: scale(1.02);
 
 }
-
 
 .imgh {
 
@@ -316,57 +443,287 @@ a:hover {
 
 }
 
+.botton {
 
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align:center;
+  padding: 30px;
+  background-color: rgba(50, 50, 50, 0.212);
+  backdrop-filter: blur(30px);
+  border-radius: 15px;
+  border: solid 1px;
+  border-color: rgba(255, 255, 255, 0.399);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.567);
+  
+}
 
 .show {
 
-  display:block;
-  margin:  1px auto;
-  background-color: rgba(87, 87, 87, 0.155);
+  display:inline-block;
+  
+  background-color: rgb(48, 173, 63);
   font-size: 25px;
   padding: 15px;
   color: #fff;
-  border-radius: 15px;
-  border: solid 1px rgba(255, 255, 255, 0.497);
-  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.796);
-  backdrop-filter: blur(5px);
-  text-align: center;
+  border-radius: 10px;
+  border: solid 0px rgb(255, 255, 255);
   
-  transition: 0.05s;
+  transition: 0.3s;
 
 }
 
 .show:hover {
 
-  background-color: #a5fc672e;
+  background-color: #ffffff;
+  border: solid 0px rgb(255, 255, 255);
+  color: rgb(41, 145, 53);
 
 }
-
 
 .show:active {
 
-  transform: scale(0.97);
+  transform: scale(0.95);
+  transition: 0.1s linear;
 
 }
 
-#test {
+.hideText {
 
-  display: inline-block;
-  font-size: 30px;
-  border-radius: 20px;
-  background-color: rgba(34, 34, 34, 0.359);
-  backdrop-filter: blur(10px);
-  padding: 20px 20px 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  gap: 30px;
 
 }
+
+.test {
 
   
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: rgba(33, 33, 33, 0.359);
+  backdrop-filter: blur(15px);
+  padding: 10px;
+
+  transition: all 1s ease;
+
+}
+
+#text {
+
+  margin: 30px 0 0 0;
+
+}
+
+/*ساخت صفحه ارت ها*/
+
+#artMenu {
+  
+  margin: 80px 10px 15px 10px;
+  background-color: rgba(255, 255, 255, 0.577);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: solid 1px;
+
+  padding: 30px 0 700px 0 ;
+
+}
+
+.art {
+
+  
+  display: inline-block;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: 30px;
+  color: #06877e;
+  font-size: 100px;
+  font-weight: bold;
+  
+  font-family: 'Gilroy-Regular', sans-serif;
+
+    /*هنوز این رو یاد نگرفتم*/
+    font-family: monospace;
+    white-space: nowrap; /* جلوگیری از شکستن خط */
+    overflow: hidden; /* مخفی کردن متن اضافه */
+    max-width: 0px;/* شروع انیمیشن با عرض صفر */
+    border-right: 10px solid white; /* نشانگر تایپ */  
+    animation: typing 5s steps(23, end) forwards, blink 1.2s linear infinite ;
+    /*هنوز این رو یاد نگرفتم*/
+    
+}
+
+.command {
+
+  display: inline-block;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.459);
+
+  /*transition:all 1s ;*/
+
+}
+
+.artBox {
+
+  display: inline-block;
+  margin: 20px 10px 20px 10px ;
+  background-color: #fff;
+  border-radius: 7px 7px 12px 12px;
+  padding-bottom: 25px;
+  
+  transition: all 0.3s;
+}
+
+.artBox:hover {
+
+  transform:translateY(-5px); 
+  
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.534);
+
+}
+
+.artsImg {
+
+  width: 340px;
+  border-radius: 7px 7px 0 0;
+  
+}
+
+@font-face {
+  font-family: ubuntu;
+  src: url(/amozesh/items/fonts/Ubuntu-Light.ttf);
+}
+@font-face {
+  font-family: ubuntuMedium;
+  src: url(/amozesh/items/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: ubuntuBold;
+  src: url(/amozesh/items/fonts/Ubuntu-Bold.ttf);
+}
+
+.textImg {
+
+  font-family: 'ubuntuMedium', sans-serif;
+
+  font-size: 20px;
+  margin: 15px 0 0 0;
+  color: black;
+
+}
+
+#sentenceMenu {
+
+  margin: 80px 30px 15px 30px;
+  background-color: rgba(255, 255, 255, 0.142);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.46);
+
+  padding: 30px 0 200px 0 ;
+
+}
+
+.inputBox {
+
+  margin: 300px;
+  display:inline-block;
+  font-family:cursive;
+  padding: 40px 25px 25px 25px;
+  background-color:rgb(255, 254, 254);
+  border: solid 1px rgba(76, 76, 76, 0.41);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px #52525277;
+  
+}
+
+.h2-inputBox {
+
+  margin: 10px 0 40px 8px;
+  text-align: left;
+  color: #000;
+  font-family: cursive;
+  font-size: 20px;
+
+}
+
+#in-the-inputBox {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px
+
+}
+
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+input::placeholder {
+
+  color: #3a3a3a61;
+  
+}
+
+#enterName {
+
+  margin: 0 0 0px 0;
+  padding: 0 0 0 15px;
+  font-family:cursive;
+  font-weight:bold;
+  font-size: 15px;
+  width: 350px;
+  height: 45px;
+  text-align: left;
+  border-radius: 8px;
+  border: solid 0px rgb(50, 50, 255) ;
+  color: #000000;
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
+  
+  transition: 0.3s;
+
+}
+
+#enterName:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.445);
+
+}
+
+.makeSentence {
+
+  margin-top: 80px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  background: rgba(198, 255, 244, 0.148);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(65, 65, 65, 0.253);
+  border: solid 1px rgba(29, 29, 29, 0.128);
+
+}
+
+.h2-sentence {
+
+  margin: 30px;
+  font-size: 20px;
+  width: 300px;
+  color: #353535;
+
+}
 
 
 
 
-    /*https://fontawesome.com*/
-    /*for icon*/
+
+
+
+/*https://fontawesome.com*/
+/*for icon*/
 
 
 
